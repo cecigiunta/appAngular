@@ -1,0 +1,13 @@
+<mat-card role="row" class="cardProducto">
+    <mat-card-header class="header">
+     <mat-card-title><h3>{{data.title}}</h3></mat-card-title>
+    </mat-card-header>
+    <img width="150px"  src={{data.thumbnail}} alt="">
+    <mat-card-content>
+      <h4> {{data.price | currency}} </h4>
+    </mat-card-content>
+    <mat-card-actions class="actionsProducto">
+      <button mat-button routerLink="/producto/{{data.id}}"> Ver detalle</button>
+      <button mat-button (click)="eliminar()" *ngIf="isLogin">Eliminar</button>
+    </mat-card-actions>
+  </mat-card>

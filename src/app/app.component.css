@@ -1,0 +1,19 @@
+* {
+    font-family: sans-serif;
+    text-align: center;}
+.header {
+    background-color: black;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 15px;
+}
+h1{
+    color:whitesmoke;
+    font-family: 'Permanent Marker', cursive;
+}
+.pie {
+    clear: both;
+    padding: 15px;
+    background-color: rgb(85, 74, 74);
+    color: whitesmoke;
+}

@@ -1,0 +1,44 @@
+<h2>Registrá tu usuario</h2>
+<form [formGroup] ="myForm" (ngSubmit)="registrarse()">
+
+    <mat-form-field class="input" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input type="text" matInput placeholder="Ej. Pablo" formControlName="nombre" [ngClass]="{error:myForm.get('nombre')?.hasError('required') && myForm.get('nombre')?.dirty}">
+        <mat-error class="error" *ngIf="myForm.get('nombre')?.hasError('required')">
+          El campo es <strong>obligatorio</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input type="text" matInput placeholder="Ej. González" formControlName="apellido" [ngClass]="{error:myForm.get('apellido')?.hasError('required') && myForm.get('apellido')?.dirty}">
+        <mat-error class="error" *ngIf="myForm.get('apellido')?.hasError('required') && myForm.get('apellido')?.dirty">
+          El campo es <strong>obligatorio</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Ej. pat@example.com" formControlName="email" [ngClass]="{error:myForm.get('email')?.hasError('required') && myForm.get('email')?.dirty}">
+        <mat-error class="error" *ngIf="myForm.get('email')?.hasError('required') && myForm.get('email')?.dirty">
+          El campo es <strong>obligatorio</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput placeholder="xxxxx" formControlName="password" [ngClass]="{error:myForm.get('password')?.hasError('required') && myForm.get('password')?.dirty, warningMin:myForm.get('password')?.hasError('minlength') && myForm.get('password')?.dirty, warningMax:myForm.get('password')?.hasError('maxlength') && myForm.get('password')?.dirty}">
+        <mat-error class="error" *ngIf="myForm.get('password')?.hasError('required') && myForm.get('password')?.dirty">
+          El campo es <strong>obligatorio</strong>
+        </mat-error>
+        <mat-error class="error" *ngIf="myForm.get('password')?.hasError('minlength')">
+            Debe tener al menos <strong>6 caracteres</strong>
+          </mat-error>
+          <mat-error class="error" *ngIf="myForm.get('password')?.hasError('maxlength')">
+            La contraseña no debe superar los <strong>10 caracteres</strong>
+          </mat-error>
+      </mat-form-field>
+
+    <button class="button" mat-raised-button color="primary" click="registrarse()"  type="submit" [disabled]= "myForm.invalid">Registrarme</button>
+    
+</form>

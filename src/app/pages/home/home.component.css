@@ -1,0 +1,42 @@
+* {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+section {
+    margin-top: 0px;
+    padding: 10px;
+    width: 600px;
+    float: left;
+ 
+}
+.aside{ 
+  margin: 20px 0px;
+  width: 300px;
+  float: left;
+}
+
+input {
+  padding: 10px;
+}
+
+.buttonBuscar {
+  border-radius: 5px;
+}
+button:hover {
+  animation-name: background-color;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes background-color {
+0% {
+  color: black;
+}
+100% {
+  color: blue;
+}
+}
+#container {
+  text-align: right;
+}
+

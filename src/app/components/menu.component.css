@@ -1,0 +1,19 @@
+ul {
+    background-color: beige;
+    padding: 10px;
+}
+li{
+    display: inline;
+    margin: 20px;
+}
+.li:hover {
+    color:rgb(247, 199, 236);
+}
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }

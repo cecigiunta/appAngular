@@ -1,0 +1,33 @@
+<h2>Detalle</h2>
+<div>
+    <table id="tablaDetalle">
+        <thead>
+            <h3>{{producto?.title | uppercase}}</h3>
+        </thead>
+      <tbody>
+        <tr>
+            <td>Precio:</td>
+            <td>{{producto?.price | currency }}</td>
+        </tr>
+        <tr>
+            <td>ID del Producto:</td>
+            <td>{{producto?.id}}</td>
+        </tr>
+        <tr>
+            <td>Cantidad en Stock:</td>
+            <td>{{producto?.available_quantity}}</td>
+        </tr>
+        <tr>
+            <td>Cantidad Vendidos:</td>
+            <td>{{producto?.sold_quantity}}</td>
+        </tr>
+        <tr>
+            <td>Imagen</td>
+            <td><img width="100px"  src={{producto.thumbnail}} alt=""></td>
+        </tr>
+    </tbody>
+    <button mat-raised-button color="dark">Agregar al Carrito</button>
+    <button mat-raised-button color="dark" routerLink="/">Volver</button>
+
+</table>
+</div>

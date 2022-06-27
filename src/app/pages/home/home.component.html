@@ -1,0 +1,18 @@
+<div id="container">
+<body>
+<section class="section">
+    <h1 class="h3"> Listado de Productos</h1>
+    <div id="containerHome" *ngFor="let producto of productos"> 
+        <app-producto 
+        [data]= "producto">
+        </app-producto>
+    </div>
+</section>
+
+<aside class="aside">
+    <input type="text" placeholder="Buscar producto.." [(ngModel)]="buscar">
+    <button className="buttonBuscar" mat-raised-button color="primary" (click)="getAllProductos()">Buscar </button>
+</aside>
+
+</body>
+</div>

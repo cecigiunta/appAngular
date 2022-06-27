@@ -1,0 +1,25 @@
+.cardProducto {
+    width: 90%;
+    margin:auto;
+    box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.2);
+  }
+  
+  img {
+    background-size: cover;
+  }
+
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+  }
+  
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+  @keyframes background-color {
+    100% {
+      background-color: violet;    }
+  }
